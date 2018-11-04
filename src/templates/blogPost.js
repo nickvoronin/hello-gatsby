@@ -1,7 +1,8 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
-const Temlate = ({ data }) => {
+const Temlate = ({ data, pageContext }) => {
+  const { next, prev } = pageContext
   const { frontmatter: { title }, html } = data.markdownRemark;
   return (
     <>
@@ -9,7 +10,12 @@ const Temlate = ({ data }) => {
       <div
         className="blogpost"
         dangerouslySetInnerHTML={{ __html: html }}
+        style={{
+          fontFamily: 'avenir',
+        }}
       />
+      {next && <Link to={next.frontmatter.path}>Next</Link>}
+      {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
     </>
   )
 }
