@@ -1,10 +1,10 @@
 ---
 path: "/third-post"
-date: "2018-11-02"
-title "My Third Post"
-tags: ['this', 'that']
-excerpt: "A preview of my third post"
+date: "2018-07-23"
+title: "Post C"
+tags: ['this', 'other']
+excerpt: "A look at post 3"
 ---
 
-Third Post Lorem Ipsum
-Lorem lorem
+Blah blah blah
+
